@@ -17,7 +17,7 @@ const Profile = () => {
 
     setLoadMore(data.next);
 
-    function createPokemonObject(results: any[]) {
+    const createPokemonObject = (results: any[]) => {
       results.forEach(async (pokemon: { name: any }) => {
         const res = await fetch(
           `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`
@@ -26,7 +26,8 @@ const Profile = () => {
         setAllPokemons((currentList: any) => [...currentList, data]);
         allPokemons.sort((a: { id: number }, b: { id: number }) => a.id - b.id);
       });
-    }
+    };
+
     createPokemonObject(data.results);
   };
 
@@ -69,7 +70,7 @@ const Profile = () => {
         </div>
         <Button
           onClick={() => getAllPokemons()}
-          css={{ marginTop: "3%", marginLeft: "auto", marginRight: "auto" }}
+          css={{ margin: "3% auto 3% auto" }}
           name="Load more"
         />
       </div>

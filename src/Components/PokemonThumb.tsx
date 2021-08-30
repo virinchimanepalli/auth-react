@@ -1,5 +1,4 @@
 import React from "react";
-import LogoutButton from "./LogoutButton";
 
 interface IPokemonThumb {
   id: any;
