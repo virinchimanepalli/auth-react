@@ -23,3 +23,8 @@ Your app is ready to be deployed!
 ### `firebase deploy`
 deployed using firebase 
 https://pokemon-auth-app.web.app/
+
+
+
+
+note: need to make some chnages to allow Auth o to redirect to https://pokemon-auth-app.web.app instead of http://localhost:3000]
